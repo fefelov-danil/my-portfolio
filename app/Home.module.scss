@@ -1,0 +1,74 @@
+@import "assets/styles/variables";
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: max-content;
+  padding-top: 12px;
+  perspective-origin: 50%;
+  will-change: perspective-origin;
+  perspective: 100vw;
+
+  ul.nav {
+    position: relative;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+
+    & li {
+      position: relative;
+      background: #191919;
+      text-align: right;
+      transform: rotateY(-37deg) translateZ(0) scale(1);
+      transform-origin: right center;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      margin-bottom: 10px;
+      transition: 0.3s;
+
+      &:hover {
+        background: transparent;
+        transform: rotateY(-28deg) translateZ(0) scale(1);
+      }
+
+      a {
+        padding: 17px 10px 0 22px;
+        display: block;
+        text-decoration: none;
+        font-family: var(--font-muller);
+        font-size: 100px;
+        line-height: 1.2;
+        letter-spacing: 5px;
+        color: $light_100;
+        background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.3s;
+
+        &:hover {
+          transform: translate(-70px, 0);
+        }
+
+        svg {
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          transform: translate(0, -50%);
+          opacity: 0;
+          transition: 0.3s;
+        }
+
+        &:hover svg {
+          transform: translate(70px, -50%);
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+}
+
+
+
+
+

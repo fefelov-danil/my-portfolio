@@ -1,4 +1,5 @@
 import localFont from 'next/font/local'
+import { Passion_One } from 'next/font/google'
 
 export const montserrat = localFont({
   src: [
@@ -13,4 +14,20 @@ export const montserrat = localFont({
 export const muller = localFont({
   src: [{ path: '../public/fonts/MullerExtraBold.woff2', weight: '600' }],
   variable: '--font-muller',
+})
+
+export const baronNeue = localFont({
+  src: [{ path: '../public/fonts/BaronNeueBold.woff', weight: '600' }],
+  variable: '--font-baron-neue',
+})
+
+export const passionOne = Passion_One({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  variable: '--var-passion-one',
+})
+
+export const orelo = localFont({
+  src: [{ path: '../public/fonts/Orelo-sw-db.woff', weight: '600' }],
+  variable: '--font-orelo',
 })

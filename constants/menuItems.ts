@@ -5,4 +5,4 @@ export const menuItems = [
   { href: RouteNames.SKILLS, name: 'НАВЫКИ' },
   { href: RouteNames.PORTFOLIO, name: 'ПОРТФОЛИО' },
   { href: RouteNames.CONTACTS, name: 'КОНТАКТЫ' },
-]
+] as const

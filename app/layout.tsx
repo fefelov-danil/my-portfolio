@@ -2,7 +2,7 @@ import '@/assets/styles/reset.css'
 import '@/assets/styles/globals.scss'
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
-import { montserrat } from '@/constants/fonts'
+import { baronNeue, montserrat, orelo, passionOne } from '@/constants/fonts'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -12,10 +12,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={montserrat.variable}>
-        11111111
+      <body className={`${montserrat.variable} ${baronNeue.variable} ${passionOne.variable} ${orelo.variable}`}>
         <main>{children}</main>
-        11111
       </body>
     </html>
   )

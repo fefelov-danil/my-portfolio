@@ -1,7 +1,5 @@
-export default function About() {
-  return (
-    <div>
-      <h1>About me</h1>
-    </div>
-  )
+import { About } from '@/modules/about'
+
+export default function index() {
+  return <About />
 }

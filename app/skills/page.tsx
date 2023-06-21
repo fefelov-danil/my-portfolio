@@ -1,7 +1,5 @@
-export default function Skills() {
-  return (
-    <div>
-      <h1>Skills</h1>
-    </div>
-  )
+import { Skills } from '@/modules/skills'
+
+export default function index() {
+  return <Skills />
 }

@@ -1,4 +1,4 @@
-export default function Contacts() {
+export default function index() {
   return (
     <div>
       <h1>Contacts</h1>

@@ -1,13 +1,17 @@
 import { DependencyList, useEffect } from 'react'
+import { boolean } from 'zod'
 
 export const useHangEventsOnDocument = (
   handleMouseDown: (e: MouseEvent) => void,
   handleMouseMove: (e: MouseEvent) => void,
   handleMouseUp: (e: MouseEvent) => void,
   handleScroll: (e: WheelEvent) => void,
-  deps?: DependencyList
+  deps?: DependencyList,
+  disableEvents?: boolean
 ) => {
   useEffect(() => {
+    if (disableEvents) return
+
     document.addEventListener('mousedown', handleMouseDown)
     document.addEventListener('mousemove', handleMouseMove)
     document.addEventListener('mouseup', handleMouseUp)

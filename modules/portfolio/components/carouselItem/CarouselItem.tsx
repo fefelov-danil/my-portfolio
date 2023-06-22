@@ -51,8 +51,6 @@ export const CarouselItem = ({
   }
 
   const openProjectHandler = () => {
-    console.log(active)
-    console.log(index)
     if (!active) return
     setOpenProjectPopup(active)
   }

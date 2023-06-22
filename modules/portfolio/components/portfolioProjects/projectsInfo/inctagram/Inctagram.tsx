@@ -1,10 +1,12 @@
 import styles from '../ProjectsInfo.module.scss'
+import { motion } from 'framer-motion'
 import { ProjectsPopup } from '@/modules/portfolio/components/portfolioProjects/projectsPopup/ProjectsPopup'
 import social1 from '@/public/images/portfolioSliderInPopup/inctagram/social1.jpg'
 import social2 from '@/public/images/portfolioSliderInPopup/inctagram/social2.jpg'
 import social3 from '@/public/images/portfolioSliderInPopup/inctagram/social3.jpg'
 import social4 from '@/public/images/portfolioSliderInPopup/inctagram/social4.jpg'
 import social5 from '@/public/images/portfolioSliderInPopup/inctagram/social5.jpg'
+import { fadeBottomAnimation } from '@/constants/animation'
 
 type Props = {
   setOpenProjectPopup: (openProject: number) => void
@@ -20,35 +22,46 @@ export const Inctagram = ({ setOpenProjectPopup }: Props) => {
       link={'https://inctagram-m9ju.vercel.app/'}
       setOpenProjectPopup={setOpenProjectPopup}
     >
-      <div className={styles.desc}>
-        <p>Стажировка IT Incubator. Над проектом работает 7 человек. 2 backend разработчика и 5 frontend.</p>
-        <p>Опишу наиболее интересные задачи с которыми мы столкунулись:</p>
+      <motion.div
+        className={styles.desc}
+        initial={'hidden'}
+        whileInView={'visible'}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.p variants={fadeBottomAnimation} custom={0.6}>
+          Стажировка IT Incubator. Над проектом работает 7 человек. 2 backend разработчика и 5 frontend.
+        </motion.p>
+        <motion.p variants={fadeBottomAnimation} custom={0.65}>
+          Опишу некоторые интересные задачи с которыми мы столкунулись:
+        </motion.p>
         <ul>
-          <li>
+          <motion.li variants={fadeBottomAnimation} custom={0.7}>
             Infinity Scroll. В данный момент работает на подгрузке постов в профиле.
             <br />
             Реализовано на RTK Query. Новые порции запрашиваем по курсору (id), добавляем используя метод merge RTK
             Query. При добавлении поста в своем профиле не ревалидируем все посты, а добавляем только новый пост в кэш
             RTK Query, при удалении после того как запрос успешно выполнен удаляем пост из кэша.
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={fadeBottomAnimation} custom={0.75}>
             Кроппинг и наложение фильтров. Можно добавлять в один пост до 10 фото. Каждую можно приближать, менять
             соотношение сторон и накладывать фильтры. Кроппинг и добавление фильров разбито на 2 шага. Пользователь
             может переключаться между шагами, листать картинки и видеть что он уже сделал, чтобы продолжить
             редактирование. Для этого мы используем локальный стейт, а также Redux Toolkit.
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={fadeBottomAnimation} custom={0.8}>
             Регистрация через google и github. В случае если почта которая у пользователя используется в google/github
             уже зарегистрирована в нашем приложении, то на эту почту придет ссылка по которой он может перейти и
             подтвердить merge.
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={fadeBottomAnimation} custom={0.85}>
             JWT token. Мы начинали делать на react query, использовали axios, с токенами работали через interceptors.
             Затем перешли на RTK Query, используем функцию baseQueryWithReauth.
-          </li>
+          </motion.li>
         </ul>
-        <p>Я перечилслил то с чем много работал, но есть функционал в работе над которым я участия не принимал.</p>
-      </div>
+        <motion.p variants={fadeBottomAnimation} custom={0.9}>
+          Я перечилслил то с чем много работал, но есть функционал в работе над которым я участия не принимал.
+        </motion.p>
+      </motion.div>
     </ProjectsPopup>
   )
 }

@@ -31,7 +31,7 @@ export const Slider = ({ title, images }: Props) => {
       })}
       {activeImg < images.length - 1 && (
         <button className={`${styles.controlElements} ${styles.nextEl}`} onClick={() => changeImageHandler(false)}>
-          <IcomoonReact iconSet={iconSet} color={'#fff'} icon="arrow-right" size={30} />
+          <IcomoonReact iconSet={iconSet} color={'#fff'} icon="arrow-right" size={50} />
         </button>
       )}
     </div>

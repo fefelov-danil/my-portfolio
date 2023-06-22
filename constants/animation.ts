@@ -73,75 +73,98 @@ export const textBgAnimation = {
   },
 }
 
-export const bgFadeAnimation = {
+export const fadeAnimation = {
   hidden: {
+    scale: 0.85,
     opacity: 0,
   },
-  visible: {
+  visible: (custom = 0) => ({
     opacity: 1,
+    scale: 1,
     transition: {
       duration: 0.8,
       ease: 'easeOut',
+      delay: custom,
     },
+  }),
+}
+
+export const quickFadeAnimation = {
+  hidden: {
+    scale: 0.85,
+    opacity: 0,
   },
+  visible: (custom = 0) => ({
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+      delay: custom,
+    },
+  }),
 }
 
 export const fadeRightAnimation = {
   hidden: {
-    x: 25,
+    x: 45,
     opacity: 0,
   },
-  visible: {
+  visible: (custom = 0) => ({
     x: 0,
     opacity: 1,
     transition: {
       duration: 0.8,
       ease: 'easeOut',
+      delay: custom,
     },
-  },
+  }),
 }
 
 export const fadeLeftAnimation = {
   hidden: {
-    x: -25,
+    x: -45,
     opacity: 0,
   },
-  visible: {
+  visible: (custom = 0) => ({
     x: 0,
     opacity: 1,
     transition: {
       duration: 0.8,
       ease: 'easeOut',
+      delay: custom,
     },
-  },
+  }),
 }
 
 export const fadeTopAnimation = {
   hidden: {
-    x: 25,
+    x: 45,
     opacity: 0,
   },
-  visible: {
+  visible: (custom = 0) => ({
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       ease: 'easeOut',
+      delay: custom,
     },
-  },
+  }),
 }
 
 export const fadeBottomAnimation = {
   hidden: {
-    y: 25,
+    y: 45,
     opacity: 0,
   },
-  visible: {
+  visible: (custom = 0) => ({
     y: 0,
     opacity: 1,
     transition: {
       duration: 0.8,
       ease: 'easeOut',
+      delay: custom,
     },
-  },
+  }),
 }

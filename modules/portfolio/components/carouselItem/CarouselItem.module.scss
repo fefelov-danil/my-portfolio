@@ -43,6 +43,7 @@
     height: 100%;
     transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
     opacity: var(--opacity);
+    pointer-events: none;
 
     &:before {
       content: "";
@@ -132,9 +133,10 @@
   }
 
   &.active {
-    cursor: context-menu;
 
     .carouselBox {
+      pointer-events: auto;
+
       .info:before {
         width: 100%;
       }

@@ -51,6 +51,9 @@ export const CarouselItem = ({
   }
 
   const openProjectHandler = () => {
+    console.log(active)
+    console.log(index)
+    if (!active) return
     setOpenProjectPopup(active)
   }
 
@@ -62,10 +65,10 @@ export const CarouselItem = ({
       onMouseUp={changeActiveHandler}
       style={{ ...styleIndex, ...styleActive, ...styleAmountItems }}
     >
-      <div className={styles.carouselBox}>
+      <div className={styles.carouselBox} onClick={openProjectHandler}>
         <div className={styles.info}>
           <div className={styles.num}>{num}</div>
-          <p className={styles.title} onClick={openProjectHandler}>
+          <p className={styles.title}>
             {title} <IcomoonReact icon={'next'} iconSet={iconSet} color={'#fff'} size={22} />
           </p>
           <p className={styles.subtitle}>{subtitle}</p>

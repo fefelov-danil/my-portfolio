@@ -11,9 +11,9 @@
   z-index: 100;
 
   .closeBtn {
-    position: absolute;
+    position: fixed;
     top: 30px;
-    right: 30px;
+    right: 50px;
 
     svg {
       display: inline-block;
@@ -74,7 +74,7 @@
 }
 
 .sliderCol {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -99,13 +99,14 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    width: 35px;
-    height: 40px;
+    width: 40px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgb(109 100 100 / 60%);
     border-radius: 3px;
+    transition: 0.2s;
     z-index: 10;
 
     &.backEl {
@@ -114,6 +115,10 @@
 
     &.nextEl {
       right: 5px;
+    }
+
+    &:hover {
+      background: rgb(109 100 100 / 100%);
     }
   }
 }

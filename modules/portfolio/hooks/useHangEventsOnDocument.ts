@@ -1,5 +1,4 @@
 import { DependencyList, useEffect } from 'react'
-import { boolean } from 'zod'
 
 export const useHangEventsOnDocument = (
   handleMouseDown: (e: MouseEvent) => void,

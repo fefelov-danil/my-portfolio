@@ -91,7 +91,7 @@ export const fadeAnimation = {
 
 export const quickFadeAnimation = {
   hidden: {
-    scale: 0.85,
+    scale: 0.65,
     opacity: 0,
   },
   visible: (custom = 0) => ({

@@ -6,7 +6,7 @@ import { Slider } from '@/modules/portfolio/components/portfolioProjects/project
 import Link from 'next/link'
 import iconSet from '@/assets/icons/selection.json'
 import IcomoonReact from 'icomoon-react'
-import { fadeAnimation, fadeBottomAnimation, fadeLeftAnimation, quickFadeAnimation } from '@/constants/animation'
+import { fadeAnimation, fadeBottomAnimation, quickFadeAnimation } from '@/constants/animation'
 
 type Props = {
   title: string

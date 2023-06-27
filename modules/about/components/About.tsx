@@ -1,43 +1,61 @@
 'use client'
 import styles from './About.module.scss'
 import me from '@/public/images/me.png'
+import lines1 from '@/public/images/background/lines1.png'
 import { stringsForBg } from '@/modules/about/constants/bigStringForBg'
 import { StringBg } from '@/modules/about/components/stringBg/StringBg'
-import { CommonBg, Lines } from '@/assets/svg'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import iconSet from '@/assets/icons/selection.json'
+import IcomoonReact from 'icomoon-react'
+import { skills } from '@/modules/about/constants/skills'
+import { animation } from '@/constants/animation'
 
 export const About = () => {
   return (
-    <div className={styles.about}>
+    <motion.div
+      className={styles.about}
+      initial={'hidden'}
+      whileInView={'visible'}
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className={styles.info}>
-        <CommonBg />
-        <div className={styles.linesSvg}>
-          <Lines />
-        </div>
-        <div className={`${styles.linesSvg} ${styles.linesSvgBottom}`}>
-          <Lines />
-        </div>
-        <div className={styles.bgBlur}></div>
+        <motion.div variants={animation.fadeRightAnimation} className={styles.linesBg}>
+          <Image src={lines1} alt={''} />
+        </motion.div>
         <div className={styles.text}>
           <h1>
-            <span>фефелов даниил</span>
+            <span>Фефелов Даниил</span>
             <br />
             front-end developer
           </h1>
+          <ul className={styles.skills}>
+            {skills.map((skill, index) => (
+              <li key={index} className={styles.skill}>
+                <IcomoonReact iconSet={iconSet} color={'#fff'} icon={skill.icon} size={45} />
+                <br />
+                {skill.name}
+              </li>
+            ))}
+          </ul>
           <p className={styles.subtitle}>Здравствуйте! </p>
           <p>С начала 2022 года я занимаюсь разработкой приложений. Пишу на React js и Next js использую TypeScript.</p>
           <p>
-            Имею опыт работы в команде в разных проектах. Из них 1 коммерческий и 2 учебных. На каждом из этих проектов
-            многому научился. Команды были от 3х до 8 человек.
+            Имею опыт работы в команде в разных проектах, на каждом из которых многому научился. Команды были от 3х до 8
+            человек.
           </p>
           <p>
-            У меня большой опыт в верстке. С 2016 года занимаюсь разработкой сайтов, до 2022 года это было моей основной
-            работой.
+            У меня большой опыт в верстке. С 2016 года занимаюсь разработкой сайтов. Сложно посчитать, но думаю сделал
+            более 200 сайтов.
           </p>
           <p>
-            К работе отношусь ответственно, стараюсь вникнуть в задачу. Для меня важен результат, и я рад, когда вижу
-            положительную обратную связь. Знания и трудолюбие делают меня хорошим фронтенд разработчиком.
+            К работе отношусь ответственно, вникаю в задачу для меня важен результат. Я рад когда вижу положительную
+            обратную связь.
           </p>
         </div>
+        <motion.div variants={animation.fadeRightAnimation} className={`${styles.linesBg} ${styles.linesBgBottom}`}>
+          <Image src={lines1} alt={''} />
+        </motion.div>
       </div>
       <div className={styles.stringForBg}>
         <p style={{ backgroundImage: `url(${me.src})` }}>
@@ -46,6 +64,6 @@ export const About = () => {
           ))}
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }

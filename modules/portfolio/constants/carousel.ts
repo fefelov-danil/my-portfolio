@@ -12,8 +12,8 @@ export const carouselItems = [
   { title: 'Cards', subtitle: 'App', num: '02', img: carousel2 },
   { title: 'Inctagram', subtitle: 'App', num: '03', img: carousel3 },
   { title: 'Inkomprime', subtitle: 'Site', num: '04', img: carousel4 },
-  { title: 'Автобизнес', subtitle: 'Site', num: '05', img: carousel5 },
-  { title: 'iShop', subtitle: 'Site', num: '06', img: carousel6 },
+  { title: 'iShop', subtitle: 'Site', num: '05', img: carousel6 },
+  { title: 'Автобизнес', subtitle: 'Site', num: '06', img: carousel5 },
   { title: 'Васмер', subtitle: 'Site', num: '07', img: carousel7 },
   { title: 'Крастехнадзор', subtitle: 'Site', num: '08', img: carousel8 },
 ] as const

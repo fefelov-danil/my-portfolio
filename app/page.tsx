@@ -1,5 +1,5 @@
-import { Home } from '@/modules/home'
+import { About } from '@/modules/about'
 
 export default function index() {
-  return <Home />
+  return <About />
 }

@@ -1,29 +1,39 @@
 .carouselItem {
-  --items: 10;
-  --width: clamp(150px, 30vw, 350px);
-  --height: clamp(200px, 40vw, 450px);
-  --x: calc(var(--active) * 670%);
-  --y: calc(var(--active) * 170%);
-  --rot: calc(var(--active) * 120deg);
-  --opacity: calc(var(--index) / var(--amountItems) * 3 - 2);
+  $items: 10;
+  $width: 375px;
+  $height: 469px;
+  $x: calc(var(--active) * 670%);
+  $y: calc(var(--active) * 170%);
+  $rot: calc(var(--active) * 120deg);
+  $opacity: calc(var(--index) / var(--amountItems) * 3 - 2);
   position: absolute;
   top: 50%;
   left: 50%;
-  width: var(--width);
-  height: var(--height);
+  width: $width;
+  height: $height;
   transform-origin: 0 100%;
   background: black;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 8px 25px 10px rgba(0, 0, 0, 0.3);
   pointer-events: all;
-  transform: translate(var(--x), var(--y)) rotate(var(--rot));
+  transform: translate($x, $y) rotate($rot);
   user-select: none;
-  margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
+  margin: calc($height * -0.5) 0 0 calc($width * -0.5);
   animation: fade 1s;
   transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
   cursor: pointer;
   z-index: var(--index);
+
+  @media (max-width: 700px) {
+    $width: 350px;
+    $height: 437px;
+  }
+
+  @media (max-width: 450px) {
+    $width: 330px;
+    $height: 415px;
+  }
 
   @keyframes fade {
     from {
@@ -42,7 +52,7 @@
     width: 100%;
     height: 100%;
     transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
-    opacity: var(--opacity);
+    opacity: $opacity;
     pointer-events: none;
 
     &:before {
@@ -60,7 +70,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      width: max-content;
       padding-bottom: 10px;
 
       &:before {
@@ -70,9 +80,10 @@
         left: 0;
         width: 0;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        -webkit-backdrop-filter: blur(2px);
-        backdrop-filter: blur(2px);
+        background: rgba(0, 0, 0, 0.5);
+        border-bottom-right-radius: 10px;
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
         transition: 0.5s;
       }
 
@@ -82,8 +93,11 @@
         color: #fff;
         font-family: var(--font-orelo);
         font-size: 85px;
-        text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
         z-index: 1;
+
+        @media (max-width: 450px) {
+          font-size: 50px;
+        }
       }
 
       .title {
@@ -102,9 +116,19 @@
         transition-duration: 0.2s;
         z-index: 1;
 
+        @media (max-width: 450px) {
+          font-size: 20px;
+        }
+
         svg {
           margin-bottom: -6px;
           transition: 0.25s;
+
+          @media (max-width: 450px) {
+            width: 13px;
+            height: 13px;
+            margin-bottom: -3px;
+          }
         }
       }
 
@@ -120,6 +144,10 @@
         transition-delay: 0.3s;
         transition-duration: 0.2s;
         z-index: 1;
+
+        @media (max-width: 450px) {
+          font-size: 15px;
+        }
       }
     }
 

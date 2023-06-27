@@ -6,14 +6,16 @@ import { Slider } from '@/modules/portfolio/components/portfolioProjects/project
 import Link from 'next/link'
 import iconSet from '@/assets/icons/selection.json'
 import IcomoonReact from 'icomoon-react'
-import { fadeAnimation, fadeBottomAnimation, quickFadeAnimation } from '@/constants/animation'
+import { CommonBg } from '@/assets/svg'
+import { animation } from '@/constants/animation'
 
 type Props = {
   title: string
   subtitle: string
-  technologies: string[]
+  technologies?: string[]
   images: StaticImageData[]
   link: string
+  github?: string
   setOpenProjectPopup: (openProject: number) => void
   children: ReactNode
 }
@@ -24,6 +26,7 @@ export const ProjectsPopup = ({
   subtitle,
   images,
   link,
+  github,
   setOpenProjectPopup,
   children,
 }: Props) => {
@@ -33,36 +36,44 @@ export const ProjectsPopup = ({
       initial={'hidden'}
       whileInView={'visible'}
       viewport={{ once: true, amount: 0.3 }}
-      variants={quickFadeAnimation}
+      variants={animation.quickFadeAnimation}
     >
+      <CommonBg />
       <motion.button
         className={styles.closeBtn}
         onClick={() => setOpenProjectPopup(-1)}
-        variants={fadeAnimation}
+        variants={animation.fadeAnimation}
         custom={0.7}
       >
         <IcomoonReact iconSet={iconSet} color={'#fff'} icon="close" size={50} />
       </motion.button>
       <div className={styles.about}>
-        <motion.h2 variants={fadeBottomAnimation}>{title}</motion.h2>
-        <motion.p className={styles.subtitle} variants={fadeBottomAnimation} custom={0.15}>
+        <motion.h2 variants={animation.fadeBottomAnimation}>{title}</motion.h2>
+        <motion.p className={styles.subtitle} variants={animation.fadeBottomAnimation} custom={0.15}>
           {subtitle}
         </motion.p>
-        <ul className={styles.technologies}>
-          {technologies.map((item, i) => (
-            <motion.li key={i} variants={fadeBottomAnimation} custom={i * 0.1 + 0.3}>
-              {item}
-            </motion.li>
-          ))}
-        </ul>
-        <motion.div variants={fadeBottomAnimation} custom={0.45}>
+        {technologies && (
+          <ul className={styles.technologies}>
+            {technologies.map((item, i) => (
+              <motion.li key={i} variants={animation.fadeBottomAnimation} custom={i * 0.1 + 0.3}>
+                {item}
+              </motion.li>
+            ))}
+          </ul>
+        )}
+        <motion.div className={styles.projectLinks} variants={animation.fadeBottomAnimation} custom={0.45}>
           <Link href={link} className={styles.projectLink} target={'_blank'}>
-            <span>Перейти</span> <IcomoonReact iconSet={iconSet} color={'#fff'} icon="link" size={22} />
+            <IcomoonReact iconSet={iconSet} color={'#fff'} icon="link" size={22} /> <span>Перейти</span>
           </Link>
+          {github && (
+            <Link href={github} className={styles.projectLink} target={'_blank'}>
+              <IcomoonReact iconSet={iconSet} color={'#fff'} icon="github" size={22} /> <span>GitHub</span>
+            </Link>
+          )}
         </motion.div>
         <div className={styles.desc}>{children}</div>
       </div>
-      <motion.div className={styles.sliderCol} variants={fadeBottomAnimation} custom={0.75}>
+      <motion.div className={styles.sliderCol} variants={animation.fadeBottomAnimation} custom={0.75}>
         <Slider title={title} images={images} />
       </motion.div>
     </motion.div>

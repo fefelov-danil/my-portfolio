@@ -1,13 +1,16 @@
 'use client'
 import styles from './Portfolio.module.scss'
 import { CarouselItem } from '@/modules/portfolio/components/carouselItem/CarouselItem'
-import { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { carouselItems, paramsForCarousel } from '@/modules/portfolio/constants/carousel'
 import { useHangEventsOnDocument } from '@/modules/portfolio/hooks/useHangEventsOnDocument'
 import { PortfolioProjects } from '@/modules/portfolio/components/portfolioProjects/PortfolioProjects'
+import Link from 'next/link'
+import { RouteNames } from '@/constants/routes'
+import iconSet from '@/assets/icons/selection.json'
+import IcomoonReact from 'icomoon-react'
 
 export const Portfolio = () => {
-  const [loading, setLoading] = useState(true)
   const [active, setActive] = useState(1)
   const [openProjectPopup, setOpenProjectPopup] = useState(-1)
   const [mouseIsDown, setMouseIsDown] = useState(false)
@@ -19,13 +22,9 @@ export const Portfolio = () => {
     handleMouseMove,
     handleMouseUp,
     handleScroll,
-    [mouseDownXInPercent, mouseIsDown, active, openProjectPopup > 0],
-    openProjectPopup > 0
+    [mouseDownXInPercent, mouseIsDown, active, openProjectPopup >= 0],
+    openProjectPopup >= 0
   )
-
-  useEffect(() => {
-    setLoading(false)
-  }, [])
 
   function handleMouseDown(e: MouseEvent) {
     setMouseIsDown(true)
@@ -61,7 +60,10 @@ export const Portfolio = () => {
     if (e.deltaY < 0 && active !== 0) setActive(active - 1)
   }
 
-  if (loading) return <h1>Loading</h1>
+  const chengeActiveItemHandler = (direction: 'forward' | 'back') => {
+    if (direction === 'forward' && active !== paramsForCarousel.indexLastElOfArr) setActive(active + 1)
+    if (direction === 'back' && active !== 0) setActive(active - 1)
+  }
 
   return (
     <>
@@ -82,6 +84,14 @@ export const Portfolio = () => {
             setMouseIsDown={setMouseIsDown}
           />
         ))}
+      </div>
+      <div className={styles.changeActiveItem}>
+        <button onClick={() => chengeActiveItemHandler('back')}>
+          <IcomoonReact icon={'arrow-left'} iconSet={iconSet} color={'#fff'} size={40} />
+        </button>
+        <button onClick={() => chengeActiveItemHandler('forward')}>
+          <IcomoonReact icon={'arrow-right'} iconSet={iconSet} color={'#fff'} size={40} />
+        </button>
       </div>
       <PortfolioProjects openProject={openProjectPopup} setOpenProjectPopup={setOpenProjectPopup} />
     </>

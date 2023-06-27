@@ -3,6 +3,7 @@ import '@/assets/styles/globals.scss'
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
 import { baronNeue, montserrat, orelo, passionOne } from '@/constants/fonts'
+import { Header } from '@/common/header/Header'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={`${montserrat.variable} ${baronNeue.variable} ${passionOne.variable} ${orelo.variable}`}>
+        <Header />
         <main>{children}</main>
       </body>
     </html>

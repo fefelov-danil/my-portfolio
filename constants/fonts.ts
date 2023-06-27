@@ -24,7 +24,7 @@ export const baronNeue = localFont({
 export const passionOne = Passion_One({
   subsets: ['latin'],
   weight: ['400', '700', '900'],
-  variable: '--var-passion-one',
+  variable: '--font-passion-one',
 })
 
 export const orelo = localFont({

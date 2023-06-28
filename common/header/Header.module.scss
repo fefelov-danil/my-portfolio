@@ -1,12 +1,4 @@
-.test {
-  font-size: 50px;
-
-  p {
-    color: #fff;
-    font-size: 50px;
-    margin: 40px;
-  }
-}
+@import "assets/styles/variables";
 
 .burgerMenu {
   position: fixed;
@@ -136,7 +128,7 @@
         font-size: 95px;
         line-height: 1.05;
         letter-spacing: 5px;
-        color: #fff;
+        color: $light_100;
         transform: rotateY(-37deg);
         transform-origin: right center;
         transform-style: preserve-3d;

@@ -1,4 +1,4 @@
-import { RouteNames } from './routes.ts'
+import { RouteNames } from '@/constants/routes'
 
 export const menuItems = [
   { href: RouteNames.ABOUT, name: 'ОБО МНЕ' },

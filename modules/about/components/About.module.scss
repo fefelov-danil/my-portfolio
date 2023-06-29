@@ -3,7 +3,6 @@
 .about {
   position: relative;
   min-height: 100vh;
-  background: #222;
   background-image: linear-gradient(to right, #0D1014 0%, #040506 100%);
   z-index: 1;
 
@@ -29,7 +28,7 @@
       letter-spacing: -0.8px;
       font-weight: 900;
       background-repeat: no-repeat;
-      background-position: 90% bottom;
+      background-position: center bottom;
       background-size: auto 90%;
       background-clip: text;
       -webkit-background-clip: text;
@@ -40,6 +39,10 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+
+      @media (max-width: 1300px) {
+        background-size: auto 80%;
+      }
 
       .strBg {
         display: block;
@@ -58,9 +61,11 @@
     min-height: 100vh;
     padding: 80px 85px;
     overflow: hidden;
-    //background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    //background: #141416;
     z-index: 1;
+
+    @media (max-width: 1300px) {
+      padding: 60px 50px;
+    }
 
     .bgBlur {
       position: absolute;
@@ -83,7 +88,7 @@
 
     .linesBg {
       position: absolute;
-      top: -45px;
+      top: -60px;
       left: 50%;
       z-index: -1;
 
@@ -95,7 +100,7 @@
 
     .linesBgBottom {
       top: auto;
-      bottom: -38px;
+      bottom: -50px;
       left: auto;
       right: 60%;
       transform: rotate(180deg);

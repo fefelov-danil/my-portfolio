@@ -5,6 +5,7 @@ import { menuItems } from '@/constants/menuItems'
 import Link from 'next/link'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { CSSProperties, useState } from 'react'
+import { CommonBg } from '@/assets/svg'
 
 export const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
@@ -25,9 +26,10 @@ export const Header = () => {
         </div>
       </div>
       <div className={`${muller.variable} ${styles.menu} ${isOpenMenu && styles.active}`}>
+        <CommonBg />
         <ul className={styles.nav}>
           {menuItems.map((item, index) => {
-            const delay = { '--delay': 0.1 * index + 's' } as CSSProperties
+            const delay = { '--delay': 0.07 * index + 's' } as CSSProperties
 
             return (
               <li key={index} style={delay}>

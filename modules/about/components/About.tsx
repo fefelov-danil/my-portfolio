@@ -14,6 +14,13 @@ import { animation } from '@/constants/animation'
 export const About = () => {
   return (
     <div className={styles.about}>
+      <div className={styles.stringForBg}>
+        <p style={{ backgroundImage: `url(${me.src})` }}>
+          {stringsForBg.map((str, i) => (
+            <StringBg key={i} str={str} />
+          ))}
+        </p>
+      </div>
       <div className={styles.info}>
         <motion.div initial={'hidden'} whileInView={'visible'} viewport={{ once: true, amount: 0.1 }}>
           <motion.div variants={animation.fadeRightAnimation} className={styles.linesBg}>
@@ -78,13 +85,6 @@ export const About = () => {
             <Image src={lines1} alt={''} />
           </motion.div>
         </motion.div>
-      </div>
-      <div className={styles.stringForBg}>
-        <p style={{ backgroundImage: `url(${me.src})` }}>
-          {stringsForBg.map((str, i) => (
-            <StringBg key={i} str={str} />
-          ))}
-        </p>
       </div>
     </div>
   )

@@ -26,8 +26,8 @@ export const Experience = () => {
             <p className={styles.yearsInside}>04.2023 - текущий момент</p>
             <p className={styles.text}>
               <b>Стажировка IT Incubator</b>. Приложение по функционалу схоже с инстаграмом. На проекте много задач с
-              которыми я ренее не сталкивался. Сейчас пишем отдельное приложение для админки. После этого начнем
-              разрабатывать чат на websocket. Подробнее о том что уже было проделано на старнице{' '}
+              которыми я ранее не сталкивался. Сейчас пишем отдельное приложение для админки. После этого начнем
+              разрабатывать чат на websocket. Подробнее о том что уже было проделано на странице{' '}
               <Link href={RouteNames.PORTFOLIO}>Портфолио</Link>
             </p>
           </motion.div>
@@ -73,9 +73,9 @@ export const Experience = () => {
           <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
             <p className={styles.yearsInside}>01.2022 - 01.2023</p>
             <p className={styles.text}>
-              <b>Обучение</b>. Практически весь 2022 год я обучался как frontend разработчик. Улучшал свои знаяния в
-              JavaScript, изучал React js и TypeScript, плюс конечно ежедневно писал код и создавал различные проекты на
-              React.
+              <b>Обучение</b>. Практически весь 2022 год я обучался как frontend разработчик. Улучшал свои знания в
+              JavaScript, изучал React js и TypeScript, плюс, конечно, ежедневно писал код и создавал различные проекты
+              на React.
             </p>
           </motion.div>
           <p className={styles.segmentIcon}>
@@ -120,7 +120,7 @@ export const Experience = () => {
           <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
             <p className={styles.yearsInside}>04.2014 - 04.2016</p>
             <p className={styles.text}>
-              <b>SEO и контекстная реклама</b>. Почти 2 года я занимался продвижением сайтов, сначало это была настройка
+              <b>SEO и контекстная реклама</b>. Почти 2 года я занимался продвижением сайтов, сначала это была настройка
               контекстной рекламы, затем SEO продвижение сайтов. За это время успел поработать в компании как SEO
               специалист, но больше работал напрямую с клиентами.
             </p>

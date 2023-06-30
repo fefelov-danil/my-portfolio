@@ -4,6 +4,7 @@ import { ReactNode } from 'react'
 import { Metadata } from 'next'
 import { baronNeue, montserrat, orelo, passionOne } from '@/constants/fonts'
 import { Header } from '@/common/header/Header'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={`${montserrat.variable} ${baronNeue.variable} ${passionOne.variable} ${orelo.variable}`}>
         <Header />
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   )

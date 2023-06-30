@@ -77,7 +77,7 @@ export const Contacts = () => {
             variants={animation.fadeAnimation}
             custom={0.6}
           >
-            <Link href={'https://www.codewars.com/users/Danil3564'} target="_blank">
+            <Link href={'mailto:fefelov.danil@gmail.com'} target="_blank">
               <span>
                 <IcomoonReact iconSet={iconSet} color={'#fff'} icon={'email'} size={25} />
               </span>

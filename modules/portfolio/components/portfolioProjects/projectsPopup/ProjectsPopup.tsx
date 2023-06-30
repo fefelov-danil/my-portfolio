@@ -42,7 +42,7 @@ export const ProjectsPopup = ({
       <motion.button
         className={styles.closeBtn}
         onClick={() => setOpenProjectPopup(-1)}
-        variants={animation.fadeAnimation}
+        variants={animation.fadeAndScaleAnimation}
         custom={0.7}
       >
         <IcomoonReact iconSet={iconSet} color={'#fff'} icon="close" size={50} />

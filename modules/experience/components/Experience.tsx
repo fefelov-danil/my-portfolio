@@ -13,7 +13,7 @@ export const Experience = () => {
     <div className={styles.experience}>
       <div className={styles.experienceBg} style={{ background: `url(${bg.src})` }}></div>
       <motion.div initial={'hidden'} whileInView={'visible'} viewport={{ once: true, amount: 0.1 }}>
-        <motion.h1 variants={animation.fadeAnimation}>опыт работы</motion.h1>
+        <motion.h1 variants={animation.fadeAndScaleAnimation}>опыт работы</motion.h1>
       </motion.div>
       <div className={styles.segments}>
         <motion.div
@@ -32,11 +32,11 @@ export const Experience = () => {
             </p>
           </motion.div>
           <p className={styles.segmentIcon}>
-            <motion.span variants={animation.fadeAnimation} custom={0.1}>
+            <motion.span variants={animation.fadeAndScaleAnimation} custom={0.1}>
               <IcomoonReact iconSet={iconSet} color={'#fff'} icon={'calendar'} size={20} />
             </motion.span>
           </p>
-          <motion.p className={styles.segmentYear} variants={animation.fadeAnimation} custom={0.1}>
+          <motion.p className={styles.segmentYear} variants={animation.fadeAndScaleAnimation} custom={0.1}>
             <span>2023</span>
           </motion.p>
         </motion.div>
@@ -56,11 +56,11 @@ export const Experience = () => {
             </p>
           </motion.div>
           <p className={styles.segmentIcon}>
-            <motion.span variants={animation.fadeAnimation} custom={0.1}>
+            <motion.span variants={animation.fadeAndScaleAnimation} custom={0.1}>
               <IcomoonReact iconSet={iconSet} color={'#fff'} icon={'calendar'} size={20} />
             </motion.span>
           </p>
-          <motion.p className={styles.segmentYear} variants={animation.fadeAnimation} custom={0.1}>
+          <motion.p className={styles.segmentYear} variants={animation.fadeAndScaleAnimation} custom={0.1}>
             <span>2023</span>
           </motion.p>
         </motion.div>
@@ -79,11 +79,11 @@ export const Experience = () => {
             </p>
           </motion.div>
           <p className={styles.segmentIcon}>
-            <motion.span variants={animation.fadeAnimation} custom={0.1}>
+            <motion.span variants={animation.fadeAndScaleAnimation} custom={0.1}>
               <IcomoonReact iconSet={iconSet} color={'#fff'} icon={'calendar'} size={20} />
             </motion.span>
           </p>
-          <motion.p className={styles.segmentYear} variants={animation.fadeAnimation} custom={0.1}>
+          <motion.p className={styles.segmentYear} variants={animation.fadeAndScaleAnimation} custom={0.1}>
             <span>2022</span>
           </motion.p>
         </motion.div>
@@ -103,11 +103,11 @@ export const Experience = () => {
             </p>
           </motion.div>
           <p className={styles.segmentIcon}>
-            <motion.span variants={animation.fadeAnimation} custom={0.1}>
+            <motion.span variants={animation.fadeAndScaleAnimation} custom={0.1}>
               <IcomoonReact iconSet={iconSet} color={'#fff'} icon={'calendar'} size={20} />
             </motion.span>
           </p>
-          <motion.p className={styles.segmentYear} variants={animation.fadeAnimation} custom={0.1}>
+          <motion.p className={styles.segmentYear} variants={animation.fadeAndScaleAnimation} custom={0.1}>
             <span>2016</span>
           </motion.p>
         </motion.div>
@@ -126,11 +126,11 @@ export const Experience = () => {
             </p>
           </motion.div>
           <p className={styles.segmentIcon}>
-            <motion.span variants={animation.fadeAnimation} custom={0.1}>
+            <motion.span variants={animation.fadeAndScaleAnimation} custom={0.1}>
               <IcomoonReact iconSet={iconSet} color={'#fff'} icon={'calendar'} size={20} />
             </motion.span>
           </p>
-          <motion.p className={styles.segmentYear} variants={animation.fadeAnimation} custom={0.1}>
+          <motion.p className={styles.segmentYear} variants={animation.fadeAndScaleAnimation} custom={0.1}>
             <span>2014</span>
           </motion.p>
         </motion.div>

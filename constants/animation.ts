@@ -1,5 +1,5 @@
 export const animation = {
-  fadeAnimation: {
+  fadeAndScaleAnimation: {
     hidden: {
       scale: 0.85,
       opacity: 0,
@@ -7,6 +7,19 @@ export const animation = {
     visible: (custom = 0) => ({
       opacity: 1,
       scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+        delay: custom,
+      },
+    }),
+  },
+  fadeAnimation: {
+    hidden: {
+      opacity: 0,
+    },
+    visible: (custom = 0) => ({
+      opacity: 1,
       transition: {
         duration: 0.8,
         ease: 'easeOut',

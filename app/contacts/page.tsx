@@ -1,7 +1,10 @@
-export default function index() {
-  return (
-    <div>
-      <h1>Contacts</h1>
-    </div>
-  )
+import { Contacts } from '@/modules/contacts'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Контакты | Фефелов Даниил',
+}
+
+export default function Page() {
+  return <Contacts />
 }

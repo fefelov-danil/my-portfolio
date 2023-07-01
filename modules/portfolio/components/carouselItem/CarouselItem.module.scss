@@ -1,7 +1,5 @@
 .carouselItem {
   $items: 10;
-  $width: 375px;
-  $height: 469px;
   $x: calc(var(--active) * 670%);
   $y: calc(var(--active) * 170%);
   $rot: calc(var(--active) * 120deg);
@@ -9,8 +7,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: $width;
-  height: $height;
+  width: 375px;
+  height: 469px;
   transform-origin: 0 100%;
   background: black;
   overflow: hidden;
@@ -19,20 +17,22 @@
   pointer-events: all;
   transform: translate($x, $y) rotate($rot);
   user-select: none;
-  margin: calc($height * -0.5) 0 0 calc($width * -0.5);
+  margin: calc(469px * -0.5) 0 0 calc(375px * -0.5);
   animation: fade 1s;
   transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
   cursor: pointer;
   z-index: var(--index);
 
   @media (max-width: 700px) {
-    $width: 350px;
-    $height: 437px;
+    width: 350px;
+    height: 437px;
+    margin: calc(437px * -0.5) 0 0 calc(350px * -0.5);
   }
 
   @media (max-width: 450px) {
-    $width: 330px;
-    $height: 415px;
+    width: 315px;
+    height: 396px;
+    margin: calc(396px * -0.5) 0 0 calc(315px * -0.5);
   }
 
   @keyframes fade {

@@ -48,7 +48,7 @@ export const About = () => {
                 variants={animation.fadeBottomAnimation}
                 custom={index * 0.1 + 0.15}
               >
-                <IcomoonReact iconSet={iconSet} color={'#fff'} icon={skill.icon} size={45} />
+                <IcomoonReact iconSet={iconSet} color={'#fff'} icon={skill.icon} size={40} />
                 <br />
                 {skill.name}
               </motion.li>

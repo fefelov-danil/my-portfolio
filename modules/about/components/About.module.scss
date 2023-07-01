@@ -248,20 +248,20 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       column-gap: 10px;
-      row-gap: 35px;
+      row-gap: 28px;
       margin-bottom: 50px;
 
       @media (max-width: 550px) {
         grid-template-columns: repeat(4, 1fr);
       }
 
-      @media (max-width: 420px) {
+      @media (max-width: 440px) {
         grid-template-columns: repeat(3, 1fr);
       }
 
       .skill {
         text-align: center;
-        font-size: 20px;
+        font-size: 17px;
         color: #fff;
 
         @media (max-width: 700px) {

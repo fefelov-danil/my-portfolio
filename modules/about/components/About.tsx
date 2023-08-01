@@ -56,22 +56,23 @@ export const About = () => {
           </motion.ul>
           <motion.div initial={'hidden'} whileInView={'visible'} viewport={{ once: true, amount: 0.1 }}>
             <motion.p className={styles.subtitle} variants={animation.fadeBottomAnimation} custom={0.6}>
-              Здравствуйте!{' '}
+              Здравствуйте!
             </motion.p>
             <motion.p variants={animation.fadeBottomAnimation} custom={0.7}>
-              С начала 2022 года я занимаюсь разработкой приложений. Пишу на React js и Next js использую TypeScript.
+              Я опытный front-end разработчик. Создаю SPA используя React js и Next js, пишу на TypeScript.
             </motion.p>
             <motion.p variants={animation.fadeBottomAnimation} custom={0.8}>
-              Имею опыт работы в команде в разных проектах, на каждом из которых многому научился. Команды были от 3х до
-              8 человек.
+              Работал в командах от 3х до 8ми человек на разных проектах, на каждом из которых получил много опыта.
             </motion.p>
             <motion.p variants={animation.fadeBottomAnimation} custom={0.9}>
-              У меня большой опыт в верстке. С 2016 года занимаюсь разработкой сайтов. Сложно посчитать, но думаю сделал
-              более 200 сайтов.
+              С 2016 по 2022 год занимался разработкой сайтов. Лендинги, многостраничники, интернет-магазины. Движок
+              использовал WordPress и October CMS. Со многими клиентами сотрудничал по несколько лет.
             </motion.p>
             <motion.p variants={animation.fadeBottomAnimation} custom={1}>
               К работе отношусь ответственно, вникаю в задачу, для меня важен результат. Я рад, когда вижу положительную
               обратную связь.
+              <br />
+              Открыт к Вашим предложениям.
             </motion.p>
           </motion.div>
         </div>

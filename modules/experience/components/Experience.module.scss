@@ -125,6 +125,10 @@
         padding: 18px;
       }
 
+      @media (max-width: 420px) {
+        padding: 10px;
+      }
+
       .yearsInside {
         color: #fff;
         font-size: 23px;

@@ -3,10 +3,9 @@ import styles from './Experience.module.scss'
 import IcomoonReact from 'icomoon-react'
 import iconSet from '@/assets/icons/selection.json'
 import bg from '@/public/images/background/shattered.png'
-import Link from 'next/link'
-import { RouteNames } from '@/constants/routes'
 import { motion } from 'framer-motion'
 import { animation } from '@/constants/animation'
+import Link from 'next/link'
 
 export const Experience = () => {
   return (
@@ -23,59 +22,21 @@ export const Experience = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
-            <p className={styles.yearsInside}>04.2023 - текущий момент</p>
+            <p className={styles.yearsInside}>Апрель 2022 - Июнь 2023</p>
             <p className={styles.text}>
-              <b>Стажировка IT Incubator</b>. Приложение по функционалу схоже с инстаграмом. На проекте много задач с
-              которыми я ранее не сталкивался. Сейчас пишем отдельное приложение для админки. После этого начнем
-              разрабатывать чат на websocket. Подробнее о том что уже было проделано на странице{' '}
-              <Link href={RouteNames.PORTFOLIO}>Портфолио</Link>
-            </p>
-          </motion.div>
-          <p className={styles.segmentIcon}>
-            <motion.span variants={animation.fadeAndScaleAnimation} custom={0.1}>
-              <IcomoonReact iconSet={iconSet} color={'#fff'} icon={'calendar'} size={20} />
-            </motion.span>
-          </p>
-          <motion.p className={styles.segmentYear} variants={animation.fadeAndScaleAnimation} custom={0.1}>
-            <span>2023</span>
-          </motion.p>
-        </motion.div>
-        <motion.div
-          className={styles.segment}
-          initial={'hidden'}
-          whileInView={'visible'}
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
-            <p className={styles.yearsInside}>01.2023 - 03.2022</p>
-            <p className={styles.text}>
-              <b>CRM для стоматологий</b>. Команда из 6 человек (2 backend и 4 frontend разработчика). В данный момент
-              проект приостановлен. Основной функционал: база пациентов и медицинские карты для каждого, зубная формула
-              (позволяет удобно сохранять информацию после осмотра), возможность интеграции с сайтом стоматологии для
-              онлайн записи. Основные технологии на фронте: React, Redux Toolkit, Material UI.
-            </p>
-          </motion.div>
-          <p className={styles.segmentIcon}>
-            <motion.span variants={animation.fadeAndScaleAnimation} custom={0.1}>
-              <IcomoonReact iconSet={iconSet} color={'#fff'} icon={'calendar'} size={20} />
-            </motion.span>
-          </p>
-          <motion.p className={styles.segmentYear} variants={animation.fadeAndScaleAnimation} custom={0.1}>
-            <span>2023</span>
-          </motion.p>
-        </motion.div>
-        <motion.div
-          className={styles.segment}
-          initial={'hidden'}
-          whileInView={'visible'}
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
-            <p className={styles.yearsInside}>01.2022 - 01.2023</p>
-            <p className={styles.text}>
-              <b>Обучение</b>. Практически весь 2022 год я обучался как frontend разработчик. Улучшал свои знания в
-              JavaScript, изучал React js и TypeScript, плюс, конечно, ежедневно писал код и создавал различные проекты
-              на React.
+              <b>Компания UR. - Front-end разработчик.</b>
+              <br />В компании работал над двумя приложениями:
+              <br />
+              1. Сервис создания шаблонных договоров. Есть несколько шаблонов, каждому на фронте соответствует таблица.
+              Пользователь в таблицах добавляет строки и заполняет их. Затем нажимает скачать, формируется архив с
+              договорами.
+              <br />
+              Технологии на фронте: React, TypeScript, Redux Toolkit, Material UI.
+              <br />
+              2. CRM для стоматологий. Основной функционал: база пациентов и медицинские карты для каждого, зубная
+              формула (для сохранения информации после осмотра), интеграция с сайтом стоматологии для онлайн записи.
+              <br />
+              Технологии на фронте: React, TypeScript, RTK Query, Material UI.
             </p>
           </motion.div>
           <p className={styles.segmentIcon}>
@@ -94,12 +55,70 @@ export const Experience = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
-            <p className={styles.yearsInside}>10.2016 - текущий момент</p>
+            <p className={styles.yearsInside}>Август 2021 - Февраль 2022</p>
             <p className={styles.text}>
-              <b>Разработка сатов</b>. Уже почти 7 лет я занимаюсь созданием сайтов. У меня много постоянных клиентов,
-              некоторые из них со мной сотрудничают с самого начала. Создаю лендинги, многостраничные сайты,
-              интернет-магазины. Движок использую WordPress и October CMS. Умею быстро понять, что нужно заказчику.
-              Всегда с уважением отношусь к клиентам.
+              <b>Обучение (Front-end developer)</b>.<br />В процессе обучения я написал много несложных приложений, а
+              также 3 крупных:
+              <br />
+              <b>1.</b> Клон инстаграма.Работали в команде из 7 человек. Реализовали infinity Scroll, сделали кроппинг и
+              фильтры для фото, настроили регистрацию google и github.
+              <br />
+              <b>2.</b> Обучение по карточкам. Реализована сортировка, поиск, фильтрация, пагинация, используется
+              useDebounce. Регистрация и восстановление пароля через почту по токену.
+              <br />
+              <b>3.</b> Приложение для планирования своего дня. Реализовано добавление, удаление, изменение статуса
+              задач, сортировка по статусу задач.
+            </p>
+          </motion.div>
+          <p className={styles.segmentIcon}>
+            <motion.span variants={animation.fadeAndScaleAnimation} custom={0.1}>
+              <IcomoonReact iconSet={iconSet} color={'#fff'} icon={'calendar'} size={20} />
+            </motion.span>
+          </p>
+          <motion.p className={styles.segmentYear} variants={animation.fadeAndScaleAnimation} custom={0.1}>
+            <span>2021</span>
+          </motion.p>
+        </motion.div>
+        <motion.div
+          className={styles.segment}
+          initial={'hidden'}
+          whileInView={'visible'}
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
+            <p className={styles.yearsInside}>01.2022 - 01.2023</p>
+            <p className={styles.text}>
+              <b>Freelance - создание сайтов.</b>
+              <br />6 лет я занимался созданием сайтов. Имею очень большой опыт верстки. Лендинги, многостраничники,
+              интернет-магазины. Движок использовал WordPress и October CMS. Многие из моих клиентов сотрудничали со
+              мной по несколько лет. Ссылки на некоторые мои сайты:{' '}
+              <Link href={'https://inkomprime.ru/'} target={'_blank'}>
+                inkomprime.ru
+              </Link>
+              ,{' '}
+              <Link href={'https://wasmer-falc.ru/'} target={'_blank'}>
+                wasmer-falc.ru
+              </Link>
+              ,{' '}
+              <Link href={'https://ishop124.ru/'} target={'_blank'}>
+                ishop124.ru
+              </Link>
+              ,{' '}
+              <Link href={'https://avtobiznes24.ru/'} target={'_blank'}>
+                avtobiznes24.ru
+              </Link>
+              ,{' '}
+              <Link href={'https://krastehnadzor.ru/'} target={'_blank'}>
+                krastehnadzor.ru
+              </Link>
+              ,{' '}
+              <Link href={'https://кавказмаркет.рф/'} target={'_blank'}>
+                кавказмаркет.рф
+              </Link>
+              ,{' '}
+              <Link href={'https://выкупавто124.рф/'} target={'_blank'}>
+                выкупавто124.рф
+              </Link>
             </p>
           </motion.div>
           <p className={styles.segmentIcon}>

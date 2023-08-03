@@ -22,7 +22,7 @@ export const Experience = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
-            <p className={styles.yearsInside}>Апрель 2022 - Июнь 2023</p>
+            <p className={styles.yearsInside}>Июнь 2022 - Июнь 2023</p>
             <p className={styles.text}>
               <b>Компания UR. - Front-end разработчик.</b>
               <br />В компании работал над двумя приложениями:
@@ -55,7 +55,7 @@ export const Experience = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
-            <p className={styles.yearsInside}>Август 2021 - Февраль 2022</p>
+            <p className={styles.yearsInside}>Октябрь 2021 - Июнь 2022</p>
             <p className={styles.text}>
               <b>Обучение (Front-end developer)</b>.<br />В процессе обучения я написал много несложных приложений, а
               также 3 крупных:
@@ -86,7 +86,7 @@ export const Experience = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
-            <p className={styles.yearsInside}>01.2022 - 01.2023</p>
+            <p className={styles.yearsInside}>Февраль 2016 - июнь 2022</p>
             <p className={styles.text}>
               <b>Freelance - создание сайтов.</b>
               <br />6 лет я занимался созданием сайтов. Имею очень большой опыт верстки. Лендинги, многостраничники,
@@ -137,7 +137,7 @@ export const Experience = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
-            <p className={styles.yearsInside}>04.2014 - 04.2016</p>
+            <p className={styles.yearsInside}>Декабрь 2013 - Январь 2016</p>
             <p className={styles.text}>
               <b>SEO и контекстная реклама</b>. Почти 2 года я занимался продвижением сайтов, сначала это была настройка
               контекстной рекламы, затем SEO продвижение сайтов. За это время успел поработать в компании как SEO

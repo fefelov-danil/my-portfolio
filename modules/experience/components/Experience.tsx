@@ -150,7 +150,7 @@ export const Experience = () => {
             </motion.span>
           </p>
           <motion.p className={styles.segmentYear} variants={animation.fadeAndScaleAnimation} custom={0.1}>
-            <span>2014</span>
+            <span>2013</span>
           </motion.p>
         </motion.div>
       </div>

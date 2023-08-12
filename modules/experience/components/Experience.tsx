@@ -22,7 +22,7 @@ export const Experience = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div className={styles.segmentText} variants={animation.fadeBottomWithScaleAnimation} custom={0.1}>
-            <p className={styles.yearsInside}>Июнь 2022 - Июнь 2023</p>
+            <p className={styles.yearsInside}>Июнь 2022 - Июль 2023</p>
             <p className={styles.text}>
               <b>Компания UR. - Front-end разработчик.</b>
               <br />В компании работал над двумя приложениями:

@@ -30,14 +30,14 @@ export const Inctagram = ({ setOpenProjectPopup }: Props) => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.p variants={animation.fadeBottomAnimation} custom={0.6}>
-          Стажировка IT Incubator. Над проектом работает 7 человек. 2 backend разработчика и 5 frontend.
+          Стажировка IT Incubator. Над проектом работало 7 человек. 2 backend разработчика и 5 frontend.
         </motion.p>
         <motion.p variants={animation.fadeBottomAnimation} custom={0.65}>
           Опишу некоторые интересные задачи с которыми мы столкунулись:
         </motion.p>
         <ul>
           <motion.li variants={animation.fadeBottomAnimation} custom={0.7}>
-            Infinity Scroll. В данный момент работает на подгрузке постов в профиле.
+            Infinity Scroll. Работает на подгрузке постов в профиле.
             <br />
             Реализовано на RTK Query. Новые порции запрашиваем по курсору (id), добавляем используя метод merge RTK
             Query. При добавлении поста в своем профиле не ревалидируем все посты, а добавляем только новый пост в кэш
@@ -56,7 +56,7 @@ export const Inctagram = ({ setOpenProjectPopup }: Props) => {
           </motion.li>
           <motion.li variants={animation.fadeBottomAnimation} custom={0.85}>
             JWT token. Мы начинали делать на react query, использовали axios, с токенами работали через interceptors.
-            Затем перешли на RTK Query, используем функцию baseQueryWithReauth.
+            Затем перешли на RTK Query, использовали функцию baseQueryWithReauth.
           </motion.li>
         </ul>
         <motion.p variants={animation.fadeBottomAnimation} custom={0.9}>
